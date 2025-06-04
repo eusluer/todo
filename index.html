@@ -8,10 +8,26 @@
 </head>
 <body>
     <h1>Kanban Todo Board</h1>
+    <form id="taskForm" class="form-container">
+        <input type="text" id="title" placeholder="Başlık" required>
+        <textarea id="description" placeholder="Açıklama" required></textarea>
+        <input type="text" id="creator" placeholder="Oluşturan Kişi" required>
+        <input type="date" id="date" required>
+        <select id="priority">
+            <option value="green">Yeşil (Düşük)</option>
+            <option value="blue">Mavi (Orta)</option>
+            <option value="red">Kırmızı (Yüksek)</option>
+        </select>
+        <button type="submit">Ekle</button>
+    </form>
     <div class="board">
         <div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
             <h2>Todo</h2>
-            <div class="item" draggable="true" ondragstart="drag(event)">Example Task</div>
+            <div class="item green" draggable="true" ondragstart="drag(event)">
+                <div class="title">Örnek Görev</div>
+                <div class="description">Açıklama</div>
+                <div class="meta">Admin - 2023-01-01</div>
+            </div>
         </div>
         <div class="column" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
             <h2>In Progress</h2>

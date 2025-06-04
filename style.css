@@ -36,3 +36,47 @@ h1 {
     border-radius: 3px;
     cursor: grab;
 }
+
+.form-container {
+    width: 80%;
+    margin: 0 auto 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select,
+.form-container button {
+    padding: 5px;
+}
+
+.form-container textarea {
+    flex-basis: 100%;
+}
+
+.item .title {
+    font-weight: bold;
+}
+
+.item .description {
+    margin: 5px 0;
+}
+
+.item .meta {
+    font-size: 0.8em;
+    color: #555;
+}
+
+.item.green {
+    border-left: 5px solid #2ecc71;
+}
+
+.item.blue {
+    border-left: 5px solid #3498db;
+}
+
+.item.red {
+    border-left: 5px solid #e74c3c;
+}
